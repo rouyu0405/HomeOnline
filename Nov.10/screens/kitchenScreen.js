@@ -1,25 +1,9 @@
 import React, { useState, useCallback } from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  FlatList,
-  Image,
-  Alert,
-  TextInput,
-} from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, FlatList, Image, Alert, TextInput, } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { db } from "../firebaseConfig";
-import {
-  collection,
-  getDocs,
-  doc,
-  getDoc,
-  setDoc,        // ✅ 用 setDoc
-  deleteDoc,
-} from "firebase/firestore";
+import { collection, getDocs, doc, getDoc, setDoc, deleteDoc, } from "firebase/firestore";
 
 export default function KitchenScreen() {
   const navigation = useNavigation();
