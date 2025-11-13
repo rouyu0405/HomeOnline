@@ -1,15 +1,5 @@
 import React, { useState, useCallback } from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Pressable,
-  Alert,
-  ActivityIndicator,
-} from "react-native";
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Pressable, Alert, ActivityIndicator} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
@@ -25,6 +15,7 @@ export default function ClosetScreen() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  //some default trial itmes
   const defaultItems = [
     { id: "1", name: "Shirt", image: require("../../assets/shirt.webp") },
     { id: "2", name: "Jacket", image: require("../../assets/jacket.webp") },
